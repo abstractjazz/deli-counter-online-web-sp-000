@@ -4,18 +4,20 @@ def line(katz_deli)
 if katz_deli.length < 1
   puts "The line is currently empty."
 else
-  message = "The line is currently:"
-
+line_message = "The line is currently:"
 katz_deli.each_with_index do |lunch_patron, index|
-  message += " #{index+1}. #{lunch_patron}"
+line_message << " #{index+1}. #{lunch_patron}"
     end
-    puts "#{message}"
+    puts line_message
   end
 end
 #line // #takes an array of customers in line
 #notes length of line
-#puts a string with each persons name and place in line
-#or if the line is empty, returns a message that says as much
+#puts a message that says the line is empty if it is empty
+#otherwise it sets a variable for the message
+#iterates through the line, noticing each person in line, and their index, or place in line
+#appends a string with each persons name and place in line (the index + 1) to the message variable
+#puts the new message
 
 def take_a_number(katz_deli, new_customer)
 katz_deli<<(new_customer)
